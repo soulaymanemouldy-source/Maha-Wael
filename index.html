@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+<style>
+body{
+  background:#c62828;
+  color:white;
+  font-family:Arial;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  text-align:center;
+}
+#box{max-width:400px;}
+button{
+  font-size:20px;
+  padding:12px 20px;
+  background:black;
+  color:white;
+  border:none;
+}
+</style>
+</head>
+<body>
+
+<div id="box">
+<button onclick="start()">💝 Click with love 💝</button>
+<p id="text"></p>
+</div>
+
+<script>
+const lines = [
+"💖 Happy Valentine's Day 💖",
+"",
+"Maha 🌸",
+"",
+"I made this program for you, I hope you like it 🤗💌",
+"",
+"After 6 years knowing you, I love you more than words can say ❤️🌹",
+"",
+"I love you every day, every minute, every second ❤️✨",
+"",
+"You make my life more beautiful 💕",
+"",
+"From Wael 💖"
+];
+
+let i=0;
+
+function start(){
+document.querySelector("button").style.display="none";
+show();
+}
+
+function show(){
+if(i<lines.length){
+document.getElementById("text").innerHTML += lines[i]+"<br>";
+i++;
+setTimeout(show,300);
+}
+}
+</script>
+
+</body>
+</html>
